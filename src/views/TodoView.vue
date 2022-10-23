@@ -4,12 +4,17 @@ const todos = [
     id: 1,
     text: 'Learn Vue.js 3',
     completed: false
+  },
+  {
+    id: 2,
+    text: 'Learn Vue.js 3 II',
+    completed: false
   }
 ]
 </script>
 <template>
   <div>
-    <div class="todo-item" v-for="todo in todos" :key="todo.id" data-test="todo">
+    <div v-for="todo in todos" :key="todo.id" data-test="todo">
       {{ todo.text }}
     </div>
   </div>
