@@ -1,22 +1,32 @@
 <script setup lang="ts">
-const todos = [
+import { ref } from 'vue';
+
+const newTodo = ref('');
+const todos = ref([
   {
     id: 1,
     text: 'Learn Vue.js 3',
     completed: false
   },
-  {
-    id: 2,
-    text: 'Learn Vue.js 3 II',
-    completed: false
-  }
-]
+]);
+
+const createTodo = () => {
+  todos.value = [...todos.value, {
+    id: todos.value[todos.value.length - 1].id + 1,
+    text: newTodo.value,
+    completed: false,
+  }];
+  newTodo.value = '';
+};
 </script>
 <template>
   <div>
     <div v-for="todo in todos" :key="todo.id" data-test="todo">
       {{ todo.text }}
     </div>
+    <form data-test="form" @submit.prevent="createTodo">
+      <input data-test="new-todo" v-model="newTodo" />
+    </form>
   </div>
 </template>
 <style lang="scss" scoped></style>
