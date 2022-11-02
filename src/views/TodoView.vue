@@ -18,10 +18,19 @@ const createTodo = () => {
   }];
   newTodo.value = '';
 };
+
 </script>
 <template>
   <div>
-    <div v-for="todo in todos" :key="todo.id" data-test="todo">
+    <div v-for="todo in todos"
+         data-test="todo"
+         :key="todo.id"
+         :class="{ completed: todo.completed }"
+    >
+      <input type="checkbox"
+             v-model="todo.completed"
+             data-test="todo-checkbox"
+      />
       {{ todo.text }}
     </div>
     <form data-test="form" @submit.prevent="createTodo">
@@ -29,4 +38,8 @@ const createTodo = () => {
     </form>
   </div>
 </template>
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+.completed {
+  text-decoration: line-through;
+}
+</style>

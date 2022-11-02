@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import TodoView from '@/views/TodoView.vue'
 import { expect, test } from 'vitest';
 
-test('creates a todo', async() => {
+test('Adding a new todo', async() => {
   const wrapper = mount(TodoView)
   expect(wrapper.findAll('[data-test="todo"]')).toHaveLength(1)
 
