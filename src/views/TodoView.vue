@@ -38,7 +38,7 @@ const createTodo = () => {
     </form>
   </div>
 </template>
-<style lang="css" scoped>
+<style scoped>
 .completed {
   text-decoration: line-through;
 }
