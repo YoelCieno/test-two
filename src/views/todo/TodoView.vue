@@ -23,6 +23,7 @@ const createTodo = () => {
 <template>
   <div>
     <div v-for="todo in todos"
+         class="todo"
          data-test="todo"
          :key="todo.id"
          :class="{ completed: todo.completed }"
@@ -41,5 +42,9 @@ const createTodo = () => {
 <style scoped>
 .completed {
   text-decoration: line-through;
+}
+.todo {
+  display: flex;
+  gap: 0.5rem;
 }
 </style>

@@ -8,7 +8,7 @@
   "exclude": [
     "src/__tests__/*",
     "src/components/__tests__/*",
-    "src/views/__tests__/*"
+    "src/views/todo/__tests__/*"
   ],
   "compilerOptions": {
     "composite": true,

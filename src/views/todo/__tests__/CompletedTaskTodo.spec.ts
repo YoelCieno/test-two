@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import TodoView from '@/views/TodoView.vue'
+import TodoView from '@/views/todo/TodoView.vue'
 import { expect, test } from 'vitest';
 
 test('Completed a todo task', async() => {
