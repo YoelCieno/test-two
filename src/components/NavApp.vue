@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+const admin = false;
 
 </script>
 <template>
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/todo">Todo</RouterLink>
+        <RouterLink to="/">Home  | </RouterLink>
+        <RouterLink to="/about">About | </RouterLink>
+        <RouterLink to="/todo">Todo | </RouterLink> 
+        <a id="profile" to="/profile">My Profile</a>
+        <a v-if="admin" id="admin" to="/admin">Admin</a>
       </nav>
 </template>
 <style scoped>
@@ -15,6 +18,7 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+
 }
 
 nav a.router-link-exact-active {
@@ -25,7 +29,7 @@ nav a.router-link-exact-active:hover {
   background-color: transparent;
 }
 
-nav a {
+nav RouterLink {
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
