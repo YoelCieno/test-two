@@ -11,7 +11,7 @@ import NavApp from './components/NavApp.vue';
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
       <nav>
-        <NavApp />
+        <NavApp :admin="false" />
       </nav>
     </div>
   </header>

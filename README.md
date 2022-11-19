@@ -50,3 +50,8 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+### References
+
+- https://vitest.dev/guide/
+- https://test-utils.vuejs.org/guide/essentials/a-crash-course.html
